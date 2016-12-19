@@ -26,7 +26,7 @@ Ajaxは、Asynchronous（非同期）通信を可能とする技術でHTTPリク
 
 `app/views/comments/index.js.erb` 
 
-```
+```ruby
 $("#comments_area").html("<%= j(render 'comments/index', { comments: @comment.blog.comments, blog: @comment.blog }) %>")
 $(':text').val('')
 ```
@@ -36,7 +36,7 @@ $(':text').val('')
 **DOM**
 DOMとは、「Document Object Model」の略称です。このDOMでは、Webページのタグの構造を、ツリー状のデータとして扱うことが出来ます。このツリー状の構造は、ファイルやディレクトリの階層構造に似ています。また、ツリー状の各部品のことは要素と呼びます。
 
-```
+```html
 <body>
 	<h1>タイトル</h1>
 	<div>
@@ -55,7 +55,7 @@ DOMとは、「Document Object Model」の略称です。このDOMでは、Web�
 
 `index.html` 
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -83,7 +83,7 @@ DOMとは、「Document Object Model」の略称です。このDOMでは、Web�
 `index.html` 
 
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -96,10 +96,10 @@ DOMとは、「Document Object Model」の略称です。このDOMでは、Web�
 </html>
 ```
 
-`main.html` 
+`main.js` 
 
 
-```
+```html
 // コメント
 /*
 複数行のコメント
@@ -143,7 +143,7 @@ https://jquery.com/
 
 - CDN(Content Delivery Network)の利用
 
-```
+```html
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -174,7 +174,7 @@ jQueryを使う最大の利点は、セレクタでDOM要素を選択して操�
 
  **DOM要素の選択例**
  
- ```
+ ```html
 $("form");       // HTMLの例：<form></form>
 $(".className"); // HTMLの例：<div class="className"></div>
 $("#formId");    // HTMLの例：<div id="formId"></div>
@@ -202,7 +202,7 @@ $("#target").val("値")    | 要素内の値を書き換え（フォーム部品
 
 ```index.html```
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -223,7 +223,7 @@ $("#target").val("値")    | 要素内の値を書き換え（フォーム部品
 
 ```default.css```
 
-```
+```html
 .viewarea {
   background: #2DA7E0;
   border: solid 1px;
@@ -240,7 +240,7 @@ $("#target").val("値")    | 要素内の値を書き換え（フォーム部品
 
 ![DOM](http://i.imgur.com/mU6CFEw.png)
 
- ```
+ ```html
 $("#button").click( function(){
 
 	処理の内容
@@ -257,7 +257,7 @@ $("#button").click( function(){
 
 - 方法①
 
-```
+```html
 $(document).ready(function () {
     処理の内容
 });
@@ -266,7 +266,7 @@ $(document).ready(function () {
 
 - 方法②
 
-```
+```html
 $(function () {
     処理の内容
 });
@@ -278,7 +278,7 @@ $(function () {
 
 ```index.html```
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -302,7 +302,7 @@ $(function () {
 
 ```main.js```
 
-```
+```html
 $(function () {
     $("#button").click(function () {
       $(".viewarea").text("書き換えました。");
@@ -317,7 +317,7 @@ $(function () {
 
 参考HTML
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
